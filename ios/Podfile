@@ -12,6 +12,8 @@ target 'HarpyBiz' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'HarpyBizTests' do
     inherit! :complete
     # Pods for testing

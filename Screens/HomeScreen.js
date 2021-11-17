@@ -82,7 +82,7 @@ export default class HomeScreen extends React.Component {
                         </View>
                     </View>
                     <View style={styles.buttonContainer}>
-                        <TouchableOpacity style={styles.buttons}>
+                        <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("Parcel")}}>
                             <Image
                                 source={require("../Assets/Parcel.png")}
                                 style={{
@@ -94,7 +94,7 @@ export default class HomeScreen extends React.Component {
                             />
                             <Text style={styles.buttonText}>Parcel</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttons}>
+                        <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("OnGoing")}}>
                             <Image
                                 source={require("../Assets/onGoing.png")}
                                 style={{
@@ -106,7 +106,7 @@ export default class HomeScreen extends React.Component {
                             />
                             <Text style={styles.buttonText}>OnGoing</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttons}>
+                        <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("Delivered")}}>
                             <Image
                                 source={require("../Assets/Delivered.png")}
                                 style={{
@@ -143,7 +143,7 @@ export default class HomeScreen extends React.Component {
                                         </View>
                                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                             <TouchableOpacity
-                                                onPress={() => { this.props.navigation.navigate("Details") }}
+                                                onPress={() => { this.props.navigation.navigate("DetailsScreen") }}
                                                 style={{
                                                     backgroundColor: "#FAAF40",
                                                     width: '100%',
