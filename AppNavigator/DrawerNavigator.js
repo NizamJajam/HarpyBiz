@@ -1,26 +1,27 @@
 import * as React from "react"
-import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, TouchableOpacit, Button } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native"
 import HomeScreen from "../Screens/HomeScreen"
 import Details from "../Screens/Details";
 import OnGoingScreen from "../Screens/OnGoingScreen";
 import ParcelScreen from "../Screens/ParcelScreen";
+import ParcelScreen2 from "../Screens/ParcelScreen2";
 import DeliveredScreen from "../Screens/DeliveredScreen";
 import { createDrawerNavigator, DrawerItem, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { DrawerContent } from "./DrawerContent";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons"
+import Icon from "react-native-vector-icons/FontAwesome5"
 
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
-function HomeStack() {
+function HomeStack({navigation}) {
     return (
         <NavigationContainer independent="true">
             <Stack.Navigator
-                initialRouteName="HomeScreen"
+                initialRouteName="Home"
                 screenOptions={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitleAlign: 'center',
                 }}
 
@@ -28,6 +29,16 @@ function HomeStack() {
                 <Stack.Screen
                     name="Home"
                     component={HomeScreen}
+                    options={{
+                        headerLeft:()=>(
+                            <Icon 
+                            name="bars"
+                            color="black"
+                            size={25}
+                            onPress={()=>{navigation.openDrawer()}}/>
+
+                        )
+                    }}
                 />
                 <Stack.Screen
                     name="DetailsScreen"
@@ -64,6 +75,10 @@ function ParcelStack(){
                 <Stack.Screen
                     name="Parcel"
                     component={ParcelScreen}
+                />
+                <Stack.Screen
+                    name="Parcel2"
+                    component={ParcelScreen2}
                 />
 
             </Stack.Navigator>
@@ -116,11 +131,11 @@ function DeliveredStack(){
 
 function DrawerNavigator() {
     return (
-        <NavigationContainer >
+        <NavigationContainer independent="true">
             <Drawer.Navigator
                 initialRouteName="Home"
                 screenOptions={{
-                    headerShown: true,
+                    headerShown: false,
                     headerTitleAlign: 'center',
                 }}
                 drawerContent={props => <DrawerContent {...props} />}
