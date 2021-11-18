@@ -15,72 +15,144 @@ export default class ParcelScreen2 extends React.Component {
     }
     render() {
         return (
-            <KeyboardAvoidingView style={styles.main} behavior="height">
-                <View style={styles.topView}>
-                    <View style={styles.pictureFrame}>
-                        <Image
-                            source={this.state.itemPicture}
-                            resizeMode="contain"
-                        />
+            // <KeyboardAvoidingView style={styles.main} behavior="height">
+            //     <View style={styles.topView}>
+            //         <View style={styles.pictureFrame}>
+            //             <Image
+            //                 source={this.state.itemPicture}
+            //                 resizeMode="contain"
+            //             />
 
+
+            //         </View>
+
+            //     </View>
+
+            // <View style={styles.bottomView}>
+            // <Text style={{ fontWeight: 'bold', color: 'black', fontSize: 20 }}>Recipient Information</Text>
+            // <View style={styles.harpyCR}>
+            //     <View style={styles.divider}>
+            //         <Text style={styles.infoText}>Harpy CR</Text>
+            //         <Text style={styles.infoText}>:</Text>
+            //     </View>
+            //     <View style={styles.information}>
+            //         <Text style={styles.infoText}>{this.state.harpyCR}</Text>
+            //     </View>
+
+            // </View>
+            // <View style={styles.phoneNumber}>
+            //     <View style={styles.divider}>
+            //         <Text style={styles.infoText}>No. Phone</Text>
+            //         <Text style={styles.infoText}>:</Text>
+            //     </View>
+            //     <View style={styles.information}>
+            //         <Text style={styles.infoText}>{this.state.phoneNumber}</Text>
+            //     </View>
+            // </View>
+            // <View style={styles.address}>
+            //     <View style={styles.divider}>
+            //         <Text style={styles.infoText}>Address</Text>
+            //         <Text style={styles.infoText}>:</Text>
+            //     </View>
+            //     <View style={styles.information}>
+            //         <Text style={styles.infoText}>{this.state.address}</Text>
+            //     </View>
+
+            //     </View>
+
+
+
+
+            //      </View>
+            //     <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%', flex: 1 }}>
+            //         <TouchableOpacity style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '60%', borderRadius: 10 }}>
+            //             <Text style={{ color: 'white' }}>Next</Text>
+
+            //         </TouchableOpacity>
+            //         <TouchableOpacity style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '60%', borderRadius: 10 }} onPress={()=>{this.props.navigation.pop()}}>
+            //             <Text style={{ color: 'white' }}>Cancel</Text>
+
+            //         </TouchableOpacity>
+
+            //     </View>
+
+            // </KeyboardAvoidingView>
+            <View style={styles.main}>
+
+
+                <ScrollView style={styles.container}>
+                    <View style={styles.topView}>
+                        <View style={styles.pictureFrame}>
+                            <Image
+                                source={this.state.itemPicture}
+                                resizeMode="contain"
+                            />
+
+
+                        </View>
+
+                    </View>
+                    <View style={styles.bottomView}>
+                        <Text style={{ fontWeight: 'bold', color: 'black', fontSize: 20 }}>Recipient Information</Text>
+                        <View style={styles.harpyCR}>
+                            <View style={styles.divider}>
+                                <Text style={styles.infoText}>Harpy CR</Text>
+                                <Text style={styles.infoText}>:</Text>
+                            </View>
+                            <View style={styles.information}>
+                                <Text style={styles.infoText}>{this.state.harpyCR}</Text>
+                            </View>
+
+                        </View>
+                        <View style={styles.phoneNumber}>
+                            <View style={styles.divider}>
+                                <Text style={styles.infoText}>No. Phone</Text>
+                                <Text style={styles.infoText}>:</Text>
+                            </View>
+                            <View style={styles.information}>
+                                <Text style={styles.infoText}>{this.state.phoneNumber}</Text>
+                            </View>
+                        </View>
+                        <View style={styles.address}>
+                            <View style={styles.divider}>
+                                <Text style={styles.infoText}>Address</Text>
+                                <Text style={styles.infoText}>:</Text>
+                            </View>
+                            <View style={styles.information}>
+                                <Text style={styles.infoText}>{this.state.address}</Text>
+                            </View>
+
+                        </View>
+
+                        <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
+                            <TouchableOpacity
+                                style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                            >
+                                <Text style={{ color: 'white' }}>Next</Text>
+
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                                onPress={() => { this.props.navigation.goBack() }}
+                            >
+                                <Text style={{ color: 'white' }}>Cancel</Text>
+
+                            </TouchableOpacity>
+
+                        </View>
 
                     </View>
 
-                </View>
-
-                <View style={styles.bottomView}>
-                    <Text style={{ fontWeight: 'bold', color: 'black', fontSize: 20 }}>Recipient Information</Text>
-                    <View style={styles.harpyCR}>
-                        <View style={styles.divider}>
-                            <Text style={styles.infoText}>Harpy CR</Text>
-                            <Text style={styles.infoText}>:</Text>
-                        </View>
-                        <View style={styles.information}>
-                            <Text style={styles.infoText}>{this.state.harpyCR}</Text>
-                        </View>
-
-                    </View>
-                    <View style={styles.phoneNumber}>
-                        <View style={styles.divider}>
-                            <Text style={styles.infoText}>No. Phone</Text>
-                            <Text style={styles.infoText}>:</Text>
-                        </View>
-                        <View style={styles.information}>
-                            <Text style={styles.infoText}>{this.state.phoneNumber}</Text>
-                        </View>
-                    </View>
-                    <View style={styles.address}>
-                        <View style={styles.divider}>
-                            <Text style={styles.infoText}>Address</Text>
-                            <Text style={styles.infoText}>:</Text>
-                        </View>
-                        <View style={styles.information}>
-                            <Text style={styles.infoText}>{this.state.address}</Text>
-                        </View>
-
-                    </View>
-
-
-
-
-                </View>
-                <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%', flex: 1 }}>
-                    <TouchableOpacity style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '60%', borderRadius: 10 }}>
-                        <Text style={{ color: 'white' }}>Next</Text>
-
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '60%', borderRadius: 10 }} onPress={()=>{this.props.navigation.pop()}}>
-                        <Text style={{ color: 'white' }}>Cancel</Text>
-
-                    </TouchableOpacity>
-
-                </View>
-
-            </KeyboardAvoidingView>
+                </ScrollView>
+            </View>
         )
     }
 }
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        width: '100%'
+    },
     main: {
         flex: 1,
         width: '100%',
@@ -91,16 +163,15 @@ const styles = StyleSheet.create({
 
     },
     topView: {
-        flex: 3,
+        height: 300,
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
 
-
     },
     bottomView: {
-        flex: 4,
-        justifyContent: 'flex-start',
+        height: 350,
+        justifyContent: 'space-around',
         alignItems: 'center',
         width: '100%',
 
@@ -127,17 +198,17 @@ const styles = StyleSheet.create({
         overflow: 'hidden'
     },
     harpyCR: {
-        marginTop: 10,
+
         flexDirection: 'row',
         width: '90%'
     },
     phoneNumber: {
-        marginTop: 10,
+
         flexDirection: 'row',
         width: '90%'
     },
     address: {
-        marginTop: 10,
+
         flexDirection: 'row',
         width: '90%'
     },
@@ -151,7 +222,7 @@ const styles = StyleSheet.create({
         flex: 3,
         marginLeft: 10
     },
-    infoText:{
+    infoText: {
         color: 'black',
         fontSize: 15
 

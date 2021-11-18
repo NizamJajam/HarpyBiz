@@ -15,7 +15,7 @@ import Icon from "react-native-vector-icons/FontAwesome5"
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
-function HomeStack({navigation}) {
+function HomeStack({ navigation }) {
     return (
         <NavigationContainer independent="true">
             <Stack.Navigator
@@ -30,12 +30,12 @@ function HomeStack({navigation}) {
                     name="Home"
                     component={HomeScreen}
                     options={{
-                        headerLeft:()=>(
-                            <Icon 
-                            name="bars"
-                            color="black"
-                            size={25}
-                            onPress={()=>{navigation.openDrawer()}}/>
+                        headerLeft: () => (
+                            <Icon
+                                name="bars"
+                                color="black"
+                                size={25}
+                                onPress={() => { navigation.openDrawer() }} />
 
                         )
                     }}
@@ -61,8 +61,8 @@ function HomeStack({navigation}) {
     )
 }
 
-function ParcelStack(){
-    return(
+function ParcelStack() {
+    return (
         <NavigationContainer independent="true">
             <Stack.Navigator
                 initialRouteName="Parcel"
@@ -85,8 +85,8 @@ function ParcelStack(){
         </NavigationContainer>
     )
 }
-function OnGoingStack(){
-    return(
+function OnGoingStack() {
+    return (
         <NavigationContainer independent="true">
             <Stack.Navigator
                 initialRouteName="OnGoing"
@@ -100,13 +100,17 @@ function OnGoingStack(){
                     name="OnGoing"
                     component={OnGoingScreen}
                 />
+                <Stack.Screen
+                    name="DetailsScreen"
+                    component={Details}
+                />
 
             </Stack.Navigator>
         </NavigationContainer>
     )
 }
-function DeliveredStack(){
-    return(
+function DeliveredStack() {
+    return (
         <NavigationContainer independent="true">
             <Stack.Navigator
                 initialRouteName="Delivered"
@@ -139,14 +143,14 @@ function DrawerNavigator() {
                     headerTitleAlign: 'center',
                 }}
                 drawerContent={props => <DrawerContent {...props} />}
-                
-                
+
+
 
 
 
             >
                 {/* <Drawer.Screen name="UserPanel" component={UserPanel} /> */}
-                <Drawer.Screen name="Home" component={HomeStack}/>
+                <Drawer.Screen name="Home" component={HomeStack} />
             </Drawer.Navigator>
         </NavigationContainer>
     )

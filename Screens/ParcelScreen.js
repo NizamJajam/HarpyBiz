@@ -11,50 +11,97 @@ export default class ParcelScreen extends React.Component {
     }
     render() {
         return (
-            <KeyboardAvoidingView style={styles.main} behavior="height">
-                <View style={styles.topView}>
-                    <View style={styles.pictureFrame}>
-                        <Image
-                            source={this.state.itemPicture}
-                            resizeMode="contain"
-                        />
+            // <KeyboardAvoidingView style={styles.main} behavior="height">
+            //     <View style={styles.topView}>
+            //         <View style={styles.pictureFrame}>
+            //             <Image
+            //                 source={this.state.itemPicture}
+            //                 resizeMode="contain"
+            //             />
 
+
+            //         </View>
+
+            //     </View>
+
+            //     <View style={styles.bottomView}>
+            //         <TextInput placeholder="Description" placeholderTextColor="black" style={styles.textInput} />
+            //         <TextInput placeholder="Phone Number" placeholderTextColor="black" style={styles.textInput} />
+            //         <TextInput placeholder="Number of Items" placeholderTextColor="black" style={styles.textInput} />
+            //         <TextInput placeholder="Size" placeholderTextColor="black" style={styles.textInput} />
+
+            //         <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
+            //             <TouchableOpacity
+            //                 style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+            //                 onPress={() => { this.props.navigation.navigate("Parcel2") }}
+
+            //             >
+            //                 <Text style={{ color: 'white' }}>Next</Text>
+
+            //             </TouchableOpacity>
+            //             <TouchableOpacity
+            //                 style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+            //             >
+            //                 <Text style={{ color: 'white' }}>Cancel</Text>
+
+            //             </TouchableOpacity>
+
+            //         </View>
+
+            //     </View>
+
+            // </KeyboardAvoidingView>
+            <View style={styles.main}>
+
+
+                <ScrollView style={styles.container}>
+                    <View style={styles.topView}>
+                        <View style={styles.pictureFrame}>
+                            <Image
+                                source={this.state.itemPicture}
+                                resizeMode="contain"
+                            />
+
+
+                        </View>
+
+                    </View>
+                    <View style={styles.bottomView}>
+                        <TextInput placeholder="Description" placeholderTextColor="grey" style={styles.textInput} />
+                        <TextInput placeholder="Phone Number" placeholderTextColor="grey" style={styles.textInput} />
+                        <TextInput placeholder="Number of Items" placeholderTextColor="grey" style={styles.textInput} />
+                        <TextInput placeholder="Size" placeholderTextColor="grey" style={styles.textInput} />
+
+                        <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
+                            <TouchableOpacity
+                                style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                                onPress={() => { this.props.navigation.navigate("Parcel2") }}
+
+                            >
+                                <Text style={{ color: 'white' }}>Next</Text>
+
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                            >
+                                <Text style={{ color: 'white' }}>Cancel</Text>
+
+                            </TouchableOpacity>
+
+                        </View>
 
                     </View>
 
-                </View>
-
-                <View style={styles.bottomView}>
-                    <TextInput placeholder="Description" placeholderTextColor="black" style={styles.textInput} />
-                    <TextInput placeholder="Phone Number" placeholderTextColor="black" style={styles.textInput} />
-                    <TextInput placeholder="Number of Items" placeholderTextColor="black" style={styles.textInput} />
-                    <TextInput placeholder="Size" placeholderTextColor="black" style={styles.textInput} />
-
-                    <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
-                        <TouchableOpacity
-                            style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
-                            onPress={() => { this.props.navigation.navigate("Parcel2") }}
-
-                        >
-                            <Text style={{ color: 'white' }}>Next</Text>
-
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
-                        >
-                            <Text style={{ color: 'white' }}>Cancel</Text>
-
-                        </TouchableOpacity>
-
-                    </View>
-
-                </View>
-
-            </KeyboardAvoidingView>
+                </ScrollView>
+            </View>
         )
     }
 }
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        width: '100%'
+    },
     main: {
         flex: 1,
         width: '100%',
@@ -65,7 +112,7 @@ const styles = StyleSheet.create({
 
     },
     topView: {
-        flex: 3,
+        height: 300,
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
@@ -73,7 +120,7 @@ const styles = StyleSheet.create({
 
     },
     bottomView: {
-        flex: 5,
+        height: 350,
         justifyContent: 'space-around',
         alignItems: 'center',
         width: '100%',
@@ -98,6 +145,7 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         borderRadius: 20,
         elevation: 1,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        color: 'black',
     },
 })
