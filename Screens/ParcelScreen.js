@@ -83,6 +83,7 @@ export default class ParcelScreen extends React.Component {
                             </TouchableOpacity>
                             <TouchableOpacity
                                 style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                                onPress={()=>{this.props.navigation.navigate("Home")}}
                             >
                                 <Text style={{ color: 'white' }}>Cancel</Text>
 

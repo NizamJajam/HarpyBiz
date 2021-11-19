@@ -40,7 +40,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Parcel"
-                            onPress={() => { }}
+                            onPress={() => { props.navigation.navigate("ParcelStack") }}
 
                         />
                         <Drawer.Item
@@ -51,7 +51,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="OnGoing"
-                            onPress={() => { }}
+                            onPress={() => {props.navigation.navigate("OnGoingStack") }}
 
                         />
                         <Drawer.Item

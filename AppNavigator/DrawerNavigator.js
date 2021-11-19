@@ -41,20 +41,38 @@ function HomeStack({ navigation }) {
                     }}
                 />
                 <Stack.Screen
+                    name="MainDrawerNavigator"
+                    component={DrawerNavigator}
+                    // options={{
+                    //     headerLeft: () => (
+                    //         <Icon
+                    //             name="bars"
+                    //             color="black"
+                    //             size={25}
+                    //             onPress={() => { navigation.openDrawer() }} />
+
+                    //     )
+                    // }}
+                />
+                <Stack.Screen
                     name="DetailsScreen"
                     component={Details}
                 />
                 <Stack.Screen
                     name="Parcel"
-                    component={ParcelStack}
+                    component={ParcelScreen}
                 />
                 <Stack.Screen
                     name="OnGoing"
-                    component={OnGoingStack}
+                    component={OnGoingScreen}
                 />
                 <Stack.Screen
                     name="Delivered"
-                    component={DeliveredStack}
+                    component={DeliveredScreen}
+                />
+                <Stack.Screen
+                    name="Parcel2"
+                    component={ParcelScreen2}
                 />
             </Stack.Navigator>
         </NavigationContainer>
@@ -67,7 +85,7 @@ function ParcelStack() {
             <Stack.Navigator
                 initialRouteName="Parcel"
                 screenOptions={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitleAlign: 'center',
                 }}
 
@@ -144,13 +162,12 @@ function DrawerNavigator() {
                 }}
                 drawerContent={props => <DrawerContent {...props} />}
 
-
-
-
-
             >
-                {/* <Drawer.Screen name="UserPanel" component={UserPanel} /> */}
-                <Drawer.Screen name="Home" component={HomeStack} />
+                <Drawer.Screen name="HomeStack" component={HomeStack} />
+                <Drawer.Screen name="ParcelStack" component={ParcelStack}/>
+                <Drawer.Screen name="OnGoingStack" component={OnGoingStack}/>
+                <Drawer.Screen name="DeliveredStack" component={DeliveredStack}/>
+
             </Drawer.Navigator>
         </NavigationContainer>
     )
