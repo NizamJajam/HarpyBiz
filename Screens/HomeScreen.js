@@ -209,7 +209,8 @@ const styles = StyleSheet.create({
     businessOwner: {
         fontSize: 19,
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily:"SourceCodePro"
     },
     companyName: {
         color: 'grey',
