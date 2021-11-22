@@ -34,8 +34,11 @@ function HomeStack({ navigation }) {
                             <Icon
                                 name="bars"
                                 color="black"
-                                size={25}
-                                onPress={() => { navigation.openDrawer() }} />
+                                size={30}
+                                onPress={() => { navigation.openDrawer() }} 
+                                style={{width: 50, height: 35,justifyContent: 'center', alignItems: 'center'}}
+                                
+                                />
 
                         )
                     }}

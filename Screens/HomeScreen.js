@@ -7,7 +7,7 @@ export default class HomeScreen extends React.Component {
         super(props);
         this.state = {
             businessOwner: "Sani Bundle",
-            companyName: "Amren Bundle",
+            companyName: "Sani Bundle",
             logo: "https://drive.google.com/file/d/1p68L4lbQNlPaiwAiem7C1SMQn5SAiMXp/view",
             wallPaper: require("../assets/coverPhoto.png"),
             Deliveries: [
@@ -53,7 +53,7 @@ export default class HomeScreen extends React.Component {
             <View style={styles.main}>
                 <View style={styles.wallpaperView}>
                     <Image
-                        style={{ 
+                        style={{
                             width: '110%',
                             height: '110%'
                         }}
@@ -82,7 +82,7 @@ export default class HomeScreen extends React.Component {
                         </View>
                     </View>
                     <View style={styles.buttonContainer}>
-                        <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("Parcel")}}>
+                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("Parcel") }}>
                             <Image
                                 source={require("../assets/Parcel.png")}
                                 style={{
@@ -94,7 +94,7 @@ export default class HomeScreen extends React.Component {
                             />
                             <Text style={styles.buttonText}>Parcel</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("OnGoing")}}>
+                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("OnGoing") }}>
                             <Image
                                 source={require("../assets/onGoing.png")}
                                 style={{
@@ -106,7 +106,7 @@ export default class HomeScreen extends React.Component {
                             />
                             <Text style={styles.buttonText}>OnGoing</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("Delivered")}}>
+                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("Delivered") }}>
                             <Image
                                 source={require("../assets/Delivered.png")}
                                 style={{
@@ -120,7 +120,7 @@ export default class HomeScreen extends React.Component {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.recentDeliveries}>
-                        <Text style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}>Recent Deliveries</Text>
+                        <Text style={{ color: 'black', fontSize: 19, fontFamily: 'SourceCodePro-SemiBold', }}>Recent Deliveries</Text>
                         <View style={styles.flatListContainer}>
                             <FlatList style={{ flex: 1 }}
                                 data={this.state.Deliveries}
@@ -128,7 +128,7 @@ export default class HomeScreen extends React.Component {
                                 renderItem={({ item }) =>
                                     <View style={styles.listItems}>
                                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                                            <View style={{ backgroundColor: 'white', width: "90%", height: '90%', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: "#FAAF40", borderRadius: 10 }}>
+                                            <View style={{ backgroundColor: 'white', width: "90%", height: '80%', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: "#FAAF40", borderRadius: 10 }}>
                                                 <Image
                                                     source={item.image}
                                                     resizeMode="contain"
@@ -137,9 +137,9 @@ export default class HomeScreen extends React.Component {
 
                                         </View>
                                         <View style={{ flex: 3, padding: 10 }}>
-                                            <Text style={{ color: 'black', fontWeight: 'bold' }}>{item.username}</Text>
-                                            <Text style={{ color: 'grey' }}>{item.date}</Text>
-                                            <Text style={{ color: 'grey' }}>{item.route}</Text>
+                                            <Text style={{ color: 'black', fontFamily: 'SourceCodePro-SemiBold', }}>{item.username}</Text>
+                                            <Text style={{ color: 'grey', fontFamily: 'SourceCodePro', fontSize: 11}}>{item.date}</Text>
+                                            <Text style={{ color: 'grey', fontFamily: 'SourceCodePro', fontSize: 11 }}>{item.route}</Text>
                                         </View>
                                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                             <TouchableOpacity
@@ -209,12 +209,13 @@ const styles = StyleSheet.create({
     businessOwner: {
         fontSize: 19,
         color: 'black',
-        fontWeight: 'bold',
-        fontFamily:"SourceCodePro"
+        // fontWeight: 'bold',
+        fontFamily: 'SourceCodePro-SemiBold',
     },
     companyName: {
         color: 'grey',
         fontSize: 11,
+        fontFamily: 'SourceCodePro',
     },
     buttonContainer: {
         flex: 1,
@@ -227,13 +228,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#FAAF40",
         width: 70,
         height: 70,
-        borderRadius: 20,
+        borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
         padding: 5
     },
     buttonText: {
-        fontSize: 11,
+        fontSize: 10,
+        color: 'white',
+        fontFamily: 'SourceCodePro',
     },
     recentDeliveries: {
         flex: 4,
@@ -247,7 +250,7 @@ const styles = StyleSheet.create({
         width: '95%'
     },
     listItems: {
-        padding: 5,
+        paddingHorizontal: 5,
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',

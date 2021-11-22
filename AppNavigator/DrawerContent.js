@@ -151,11 +151,12 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         marginTop: 3,
-        fontWeight: 'bold',
+        fontFamily:'SourceCodePro-SemiBold'
     },
     caption: {
         fontSize: 14,
-        lineHeight: 14
+        lineHeight: 14,
+        fontFamily: 'SourceCodePro',
     },
     row: {
         marginTop: 20,

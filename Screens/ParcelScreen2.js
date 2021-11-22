@@ -93,7 +93,7 @@ export default class ParcelScreen2 extends React.Component {
 
                     </View>
                     <View style={styles.bottomView}>
-                        <Text style={{ fontWeight: 'bold', color: 'black', fontSize: 20 }}>Recipient Information</Text>
+                        <Text style={{ color: 'black', fontSize: 20, fontFamily: 'SourceCodePro-SemiBold' }}>Recipient Information</Text>
                         <View style={styles.harpyCR}>
                             <View style={styles.divider}>
                                 <Text style={styles.infoText}>Harpy CR</Text>
@@ -126,13 +126,13 @@ export default class ParcelScreen2 extends React.Component {
 
                         <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
                             <TouchableOpacity
-                                style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                                style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
                             >
                                 <Text style={{ color: 'white' }}>Next</Text>
 
                             </TouchableOpacity>
                             <TouchableOpacity
-                                style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                                style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
                                 onPress={() => { this.props.navigation.goBack() }}
                             >
                                 <Text style={{ color: 'white' }}>Cancel</Text>
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
         borderColor: 'grey',
         paddingLeft: 20,
-        borderRadius: 20,
+        borderRadius: 15,
         elevation: 1,
         overflow: 'hidden'
     },
@@ -224,7 +224,8 @@ const styles = StyleSheet.create({
     },
     infoText: {
         color: 'black',
-        fontSize: 15
+        fontSize: 15,
+        fontFamily: 'SourceCodePro'
 
     },
 })

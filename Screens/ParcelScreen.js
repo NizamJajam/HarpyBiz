@@ -68,13 +68,13 @@ export default class ParcelScreen extends React.Component {
                     </View>
                     <View style={styles.bottomView}>
                         <TextInput placeholder="Description" placeholderTextColor="grey" style={styles.textInput} />
-                        <TextInput placeholder="Phone Number" placeholderTextColor="grey" style={styles.textInput} />
-                        <TextInput placeholder="Number of Items" placeholderTextColor="grey" style={styles.textInput} />
+                        <TextInput placeholder="Phone Number" placeholderTextColor="grey" style={styles.textInput} keyboardType="phone-pad"/>
+                        <TextInput placeholder="Number of Items" placeholderTextColor="grey" style={styles.textInput} keyboardType="numeric"/>
                         <TextInput placeholder="Size" placeholderTextColor="grey" style={styles.textInput} />
 
                         <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
                             <TouchableOpacity
-                                style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                                style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
                                 onPress={() => { this.props.navigation.navigate("Parcel2") }}
 
                             >
@@ -82,7 +82,7 @@ export default class ParcelScreen extends React.Component {
 
                             </TouchableOpacity>
                             <TouchableOpacity
-                                style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 10 }}
+                                style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
                                 onPress={()=>{this.props.navigation.navigate("Home")}}
                             >
                                 <Text style={{ color: 'white' }}>Cancel</Text>
@@ -144,9 +144,11 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
         borderColor: 'grey',
         paddingLeft: 20,
-        borderRadius: 20,
+        borderRadius: 10,
         elevation: 1,
         overflow: 'hidden',
         color: 'black',
+        backgroundColor: 'white',
+        fontFamily:"SourceCodePro"
     },
 })

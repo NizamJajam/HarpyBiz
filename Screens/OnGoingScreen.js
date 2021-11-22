@@ -91,10 +91,10 @@ export default class OnGoingScreen extends React.Component {
                                             </View>
 
                                         </View> */}
-                                <View style={{ flex: 3, padding: 10 }}>
-                                    <Text style={{ color: 'black', fontWeight: 'bold' }}>{item.username}</Text>
-                                    <Text style={{ color: 'grey' }}>{item.date}</Text>
-                                    <Text style={{ color: 'grey' }}>{item.route}</Text>
+                                <View style={{ flex: 3, padding: 5 }}>
+                                    <Text style={{ color: 'black', fontFamily: 'SourceCodePro-SemiBold', }}>{item.username}</Text>
+                                    <Text style={{ color: 'grey', fontFamily: 'SourceCodePro',fontSize: 11 }}>{item.date}</Text>
+                                    <Text style={{ color: 'grey', fontFamily: 'SourceCodePro',fontSize: 11 }}>{item.route}</Text>
                                 </View>
                                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                     <TouchableOpacity
@@ -108,7 +108,7 @@ export default class OnGoingScreen extends React.Component {
 
                                         }}
                                     >
-                                        <Text style={{ color: 'white' }}>Details</Text>
+                                        <Text style={{ color: 'white', fontWeight: 'bold' }}>Details</Text>
                                     </TouchableOpacity>
                                 </View>
 
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
 
     },
     listItems: {
-        padding: 5,
+        paddingHorizontal: 5,
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
