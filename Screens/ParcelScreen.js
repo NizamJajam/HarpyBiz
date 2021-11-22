@@ -6,7 +6,7 @@ export default class ParcelScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            itemPicture: require("../Assets/sneakers2.png")
+            itemPicture: require("../assets/sneakers2.png")
         }
     }
     render() {

@@ -9,37 +9,37 @@ export default class HomeScreen extends React.Component {
             businessOwner: "Sani Bundle",
             companyName: "Amren Bundle",
             logo: "https://drive.google.com/file/d/1p68L4lbQNlPaiwAiem7C1SMQn5SAiMXp/view",
-            wallPaper: require("../Assets/coverPhoto.png"),
+            wallPaper: require("../assets/coverPhoto.png"),
             Deliveries: [
                 {
-                    image: require("../Assets/tShirt.png"),
+                    image: require("../assets/tShirt.png"),
                     username: "Karl Musakkal",
                     date: "Saturday, 10 September 2021",
                     route: "Kota Kinabalu - Tawau",
                     details: "",
                 },
                 {
-                    image: require("../Assets/sneakers.png"),
+                    image: require("../assets/sneakers.png"),
                     username: "Mohamed Amrin",
                     date: "Saturday, 10 September 2021",
                     route: "Kota Kinabalu - Tawau",
                     details: "",
                 },
                 {
-                    image: require("../Assets/tShirt.png"),
+                    image: require("../assets/tShirt.png"),
                     username: "Jack",
                     date: "Saturday, 10 September 2021",
                     route: "Kota Kinabalu - Tawau",
                     details: "",
                 },
                 {
-                    image: require("../Assets/sneakers.png"),
+                    image: require("../assets/sneakers.png"),
                     username: "Borhanuddin",
                     date: "Saturday, 10 September 2021",
                     route: "Kota Kinabalu - Tawau",
                     details: "",
                 }, {
-                    image: require("../Assets/makeup.png"),
+                    image: require("../assets/makeup.png"),
                     username: "Wan",
                     date: "Saturday, 10 September 2021",
                     route: "Kota Kinabalu - Tawau",
@@ -66,7 +66,7 @@ export default class HomeScreen extends React.Component {
                     <View style={styles.userDetails}>
                         <View style={styles.imageContainer}>
                             <Image
-                                source={require("../Assets/manPhoto.png")}
+                                source={require("../assets/manPhoto.png")}
                                 style={{
                                     width: 110,
                                     height: 110,
@@ -84,7 +84,7 @@ export default class HomeScreen extends React.Component {
                     <View style={styles.buttonContainer}>
                         <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("Parcel")}}>
                             <Image
-                                source={require("../Assets/Parcel.png")}
+                                source={require("../assets/Parcel.png")}
                                 style={{
                                     width: 35,
                                     height: 35,
@@ -96,7 +96,7 @@ export default class HomeScreen extends React.Component {
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("OnGoing")}}>
                             <Image
-                                source={require("../Assets/onGoing.png")}
+                                source={require("../assets/onGoing.png")}
                                 style={{
                                     width: 35,
                                     height: 35,
@@ -108,7 +108,7 @@ export default class HomeScreen extends React.Component {
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.buttons} onPress={()=>{this.props.navigation.navigate("Delivered")}}>
                             <Image
-                                source={require("../Assets/Delivered.png")}
+                                source={require("../assets/Delivered.png")}
                                 style={{
                                     width: 35,
                                     height: 35,
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     },
     companyName: {
         color: 'grey',
-        fontSize: 11
+        fontSize: 11,
     },
     buttonContainer: {
         flex: 1,

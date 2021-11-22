@@ -13,7 +13,7 @@ export function DrawerContent(props) {
                     <View style={styles.userInfoSection}>
                         <View style={{ marginTop: 15, justifyContent: 'center', alignItems: 'center', width: '80%' }}>
                             <Avatar.Image
-                                source={require("../Assets/manPhoto.png")}
+                                source={require("../assets/manPhoto.png")}
                                 size={90}
                             />
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>

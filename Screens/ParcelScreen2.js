@@ -6,7 +6,7 @@ export default class ParcelScreen2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            itemPicture: require("../Assets/sneakers2.png"),
+            itemPicture: require("../assets/sneakers2.png"),
             harpyCR: "Mohamed Amrin Bin Abdul Mansor",
             phoneNumber: "010 357 0729",
             address: "No 23, Lorong 3, Taman Sempaul, 88000 Kota Kinabalu Sabah"

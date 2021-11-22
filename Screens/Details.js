@@ -8,7 +8,7 @@ export default class newFile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            itemImage: require("../Assets/tShirt.png"),
+            itemImage: require("../assets/tShirt.png"),
             name: 'Mohamed  Amrin Bin Abdul Mansor',
             phoneNumber: '010 357 0729',
             address: "No 23, Lorong 3, Taman Sempaul, 91308 Semporna, Sabah",
@@ -17,21 +17,21 @@ export default class newFile extends React.Component {
             estimatedHours: '2 - 3 Hours',
             RiderDetails: [
                 {
-                    image: require("../Assets/tShirt.png"),
+                    image: require("../assets/tShirt.png"),
                     username: "Rider Name",
                     date: "Saturday, 10 September 2021",
                     route: "ST 7 R",
                     details: "",
                 },
                 {
-                    image: require("../Assets/tShirt.png"),
+                    image: require("../assets/tShirt.png"),
                     username: "Cloud Runner",
                     date: "Saturday, 10 September 2021",
                     route: "Kota Kinabalu - Tawau",
                     details: "",
                 },
                 {
-                    image: require("../Assets/tShirt.png"),
+                    image: require("../assets/tShirt.png"),
                     username: "Rider Name",
                     date: "Saturday, 10 September 2021",
                     route: "ST 7 R",
