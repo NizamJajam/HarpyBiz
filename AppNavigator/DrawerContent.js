@@ -51,7 +51,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="OnGoing"
-                            onPress={() => {props.navigation.navigate("OnGoingStack") }}
+                            onPress={() => { props.navigation.navigate("OnGoingStack") }}
 
                         />
                         <Drawer.Item
@@ -62,7 +62,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Delivered"
-                            onPress={() => { }}
+                            onPress={() => { props.navigation.navigate("DeliveredStack") }}
 
                         />
                         <Drawer.Item
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         marginTop: 3,
-        fontFamily:'SourceCodePro-SemiBold'
+        fontFamily: 'SourceCodePro-SemiBold'
     },
     caption: {
         fontSize: 14,

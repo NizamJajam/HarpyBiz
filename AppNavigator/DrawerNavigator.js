@@ -76,6 +76,9 @@ function HomeStack({ navigation }) {
                 <Stack.Screen
                     name="Parcel2"
                     component={ParcelScreen2}
+                    options={{
+                        title: 'Parcel'
+                    }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
@@ -112,7 +115,7 @@ function OnGoingStack() {
             <Stack.Navigator
                 initialRouteName="OnGoing"
                 screenOptions={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitleAlign: 'center',
                 }}
 
@@ -136,7 +139,7 @@ function DeliveredStack() {
             <Stack.Navigator
                 initialRouteName="Delivered"
                 screenOptions={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitleAlign: 'center',
                 }}
 
