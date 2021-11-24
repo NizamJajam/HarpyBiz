@@ -153,7 +153,7 @@ export default class HomeScreen extends React.Component {
 
                                                 }}
                                             >
-                                                <Text style={{ color: 'white' }}>Details</Text>
+                                                <Text style={{ color: 'white', fontWeight: 'bold' }}>Details</Text>
                                             </TouchableOpacity>
                                         </View>
 

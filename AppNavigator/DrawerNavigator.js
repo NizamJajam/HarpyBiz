@@ -46,16 +46,6 @@ function HomeStack({ navigation }) {
                 <Stack.Screen
                     name="MainDrawerNavigator"
                     component={DrawerNavigator}
-                    // options={{
-                    //     headerLeft: () => (
-                    //         <Icon
-                    //             name="bars"
-                    //             color="black"
-                    //             size={25}
-                    //             onPress={() => { navigation.openDrawer() }} />
-
-                    //     )
-                    // }}
                 />
                 <Stack.Screen
                     name="DetailsScreen"
@@ -161,7 +151,7 @@ function DrawerNavigator() {
     return (
         <NavigationContainer independent="true">
             <Drawer.Navigator
-                initialRouteName="Home"
+                initialRouteName="HomeStack"
                 screenOptions={{
                     headerShown: false,
                     headerTitleAlign: 'center',
