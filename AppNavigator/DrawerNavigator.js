@@ -7,6 +7,7 @@ import OnGoingScreen from "../Screens/OnGoingScreen";
 import ParcelScreen from "../Screens/ParcelScreen";
 import ParcelScreen2 from "../Screens/ParcelScreen2";
 import DeliveredScreen from "../Screens/DeliveredScreen";
+import ContactUs from "../Screens/ContactUs"
 import { createDrawerNavigator, DrawerItem, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { DrawerContent } from "./DrawerContent";
@@ -30,6 +31,7 @@ function HomeStack({ navigation }) {
                     name="Home"
                     component={HomeScreen}
                     options={{
+                        headerShown: true,
                         headerLeft: () => (
                             <Icon
                                 name="bars"
@@ -53,7 +55,7 @@ function HomeStack({ navigation }) {
                 />
                 <Stack.Screen
                     name="Parcel"
-                    component={ParcelScreen}
+                    component={ParcelStack}
                 />
                 <Stack.Screen
                     name="OnGoing"
@@ -62,13 +64,6 @@ function HomeStack({ navigation }) {
                 <Stack.Screen
                     name="Delivered"
                     component={DeliveredScreen}
-                />
-                <Stack.Screen
-                    name="Parcel2"
-                    component={ParcelScreen2}
-                    options={{
-                        title: 'Parcel'
-                    }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
@@ -81,8 +76,11 @@ function ParcelStack() {
             <Stack.Navigator
                 initialRouteName="Parcel"
                 screenOptions={{
-                    headerShown: true,
+                    headerShown: false,
                     headerTitleAlign: 'center',
+                    headerStyle:{
+                        backgroundColor: 'transparent',
+                    }
                 }}
 
             >
@@ -143,6 +141,29 @@ function DeliveredStack() {
         </NavigationContainer>
     )
 }
+function ContactScreen() {
+    return (
+        <NavigationContainer independent="true">
+            <Stack.Navigator
+                initialRouteName="Delivered"
+                screenOptions={{
+                    headerShown: true,
+                    headerTitleAlign: 'center',
+                }}
+
+            >
+                <Stack.Screen
+                    name="ContactUs"
+                    component={ContactUs}
+                    options={{
+                        title: "Contact Us"
+                    }}
+                />
+
+            </Stack.Navigator>
+        </NavigationContainer>
+    )
+}
 
 
 
@@ -163,6 +184,7 @@ function DrawerNavigator() {
                 <Drawer.Screen name="ParcelStack" component={ParcelStack}/>
                 <Drawer.Screen name="OnGoingStack" component={OnGoingStack}/>
                 <Drawer.Screen name="DeliveredStack" component={DeliveredStack}/>
+                <Drawer.Screen name="ContactUs" component={ContactScreen}/>
 
             </Drawer.Navigator>
         </NavigationContainer>

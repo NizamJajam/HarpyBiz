@@ -55,40 +55,31 @@ export default class ParcelScreen extends React.Component {
 
 
                 <ScrollView style={styles.container}>
-                    <View style={styles.topView}>
-                        <View style={styles.pictureFrame}>
+                    <TouchableOpacity style={styles.topView} onPress={()=>{}}>
+                        {/* <View style={styles.pictureFrame}>
                             <Image
                                 source={this.state.itemPicture}
                                 resizeMode="contain"
                             />
 
 
-                        </View>
+                        </View> */}
+                        <Text style={{fontSize: 25, color: '#BBBBBB', fontFamily: 'SourceCodePro'}}>Upload Parcel</Text>
 
-                    </View>
+                    </TouchableOpacity>
                     <View style={styles.bottomView}>
                         <TextInput placeholder="Description" placeholderTextColor="grey" style={styles.textInput} />
+                        <TextInput placeholder="Category" placeholderTextColor="grey" style={styles.textInput} />
                         <TextInput placeholder="Phone Number" placeholderTextColor="grey" style={styles.textInput} keyboardType="phone-pad"/>
-                        <TextInput placeholder="Number of Items" placeholderTextColor="grey" style={styles.textInput} keyboardType="numeric"/>
-                        <TextInput placeholder="Size" placeholderTextColor="grey" style={styles.textInput} />
-
                         <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
                             <TouchableOpacity
-                                style={{ backgroundColor: "#FAAF40", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
+                                style={{ backgroundColor: "#FAAF40", width: '70%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
                                 onPress={() => { this.props.navigation.navigate("Parcel2") }}
 
                             >
                                 <Text style={{ color: 'white' }}>Next</Text>
 
                             </TouchableOpacity>
-                            <TouchableOpacity
-                                style={{ backgroundColor: "#979797", width: '35%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
-                                onPress={()=>{this.props.navigation.navigate('Home', {screen: 'Home'})}}
-                            >
-                                <Text style={{ color: 'white' }}>Cancel</Text>
-
-                            </TouchableOpacity>
-
                         </View>
 
                     </View>
@@ -117,6 +108,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
+        backgroundColor: '#F2F2F2',
+        borderBottomStartRadius: 40,
+        borderBottomEndRadius: 40,
+        elevation: 5
 
 
     },
@@ -141,14 +136,11 @@ const styles = StyleSheet.create({
     textInput: {
         width: '80%',
         height: '15%',
-        borderWidth: 0.5,
-        borderColor: 'grey',
         paddingLeft: 20,
         borderRadius: 10,
-        elevation: 5,
         overflow: 'hidden',
         color: 'black',
-        backgroundColor: 'white',
+        backgroundColor: '#F2F2F2',
         fontFamily:"SourceCodePro"
     },
 })

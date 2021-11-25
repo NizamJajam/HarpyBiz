@@ -5,7 +5,7 @@ import DrawerNavigator from "./AppNavigator/DrawerNavigator";
 
 const App = props => {
   return(
-    <DrawerNavigator/>
+    <AppNavigator />
   )
 };
 

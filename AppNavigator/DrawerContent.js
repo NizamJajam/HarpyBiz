@@ -11,7 +11,7 @@ export function DrawerContent(props) {
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
                     <View style={styles.userInfoSection}>
-                        <View style={{ marginTop: 15, justifyContent: 'center', alignItems: 'center', width: '80%' }}>
+                        <View style={{ marginTop: 15, justifyContent: 'center', alignItems: 'center', width: '95%' }}>
                             <Avatar.Image
                                 source={require("../assets/manPhoto.png")}
                                 size={90}
@@ -24,6 +24,7 @@ export function DrawerContent(props) {
                                 style={{ width: '100%' }}
                                 placeholder="Search..."
                                 placeholderTextColor="grey"
+                                textAlign="center"
                                 mode="outlined"
                                 outlineColor="grey">
 
@@ -87,17 +88,6 @@ export function DrawerContent(props) {
                             onPress={() => { }}
 
                         />
-                        <Drawer.Item
-                            //empty to create gap lmao
-                            icon={({ color, size }) => (
-                                <Icon
-                                    color={color}
-                                    size={size}
-                                />
-                            )}
-                            label=""
-
-                        />
 
                         <Drawer.Item
                             icon={({ color, size }) => (
@@ -128,11 +118,56 @@ export function DrawerContent(props) {
                                     size={size}
                                 />
                             )}
+                            label="Agreements"
+                            onPress={() => { }}
+
+                        />
+                        <Drawer.Item
+                            icon={({ color, size }) => (
+                                <Icon
+                                    color={color}
+                                    size={size}
+                                />
+                            )}
                             label="Settings"
                             onPress={() => { }}
 
                         />
+                        <Drawer.Item
+                            //empty to create gap lmao
+                            icon={({ color, size }) => (
+                                <Icon
+                                    color={color}
+                                    size={size}
+                                />
+                            )}
+                            label=""
 
+                        />
+                        <Drawer.Item
+                            //empty to create gap lmao
+                            icon={({ color, size }) => (
+                                <Icon
+                                    color={color}
+                                    size={size}
+                                />
+                            )}
+                            label="Contact Us"
+                            onPress={() => { props.navigation.navigate("ContactUs")}}
+                        />
+
+                    </Drawer.Section>
+                    <Drawer.Section style={styles.bottomDrawerSection}>
+                        <DrawerItem
+                            icon={({ color, size }) => (
+                                <Icon
+                                    color={color}
+                                    size={size}
+                                />
+                            )}
+                            label="Sign Out"
+                            onPress={() => { }}
+                        />
                     </Drawer.Section>
                 </View>
             </DrawerContentScrollView>
@@ -145,29 +180,26 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     userInfoSection: {
-        justifyContent: 'center',
-        alignItems: 'center'
+        paddingLeft: 20,
     },
     title: {
-        fontSize: 20,
+        fontSize: 16,
         marginTop: 3,
-        fontFamily: 'SourceCodePro-SemiBold'
+        fontWeight: 'bold',
     },
     caption: {
         fontSize: 14,
         lineHeight: 14,
-        fontFamily: 'SourceCodePro',
     },
     row: {
         marginTop: 20,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     section: {
         flexDirection: 'row',
         alignItems: 'center',
         marginRight: 15,
-
     },
     paragraph: {
         fontWeight: 'bold',
@@ -178,9 +210,12 @@ const styles = StyleSheet.create({
     },
     bottomDrawerSection: {
         marginBottom: 15,
-        borderTopColor: "#F4F4F4",
-        borderTopWidth: 1
+
     },
-
-
-})
+    preference: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 12,
+        paddingHorizontal: 16,
+    },
+});
