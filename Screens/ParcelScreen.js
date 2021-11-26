@@ -77,7 +77,7 @@ export default class ParcelScreen extends React.Component {
                                 onPress={() => { this.props.navigation.navigate("Parcel2") }}
 
                             >
-                                <Text style={{ color: 'white' }}>Next</Text>
+                                <Text style={{ color: 'white', fontWeight: 'bold' }}>Next</Text>
 
                             </TouchableOpacity>
                         </View>

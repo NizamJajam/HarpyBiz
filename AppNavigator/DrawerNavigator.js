@@ -7,7 +7,8 @@ import OnGoingScreen from "../Screens/OnGoingScreen";
 import ParcelScreen from "../Screens/ParcelScreen";
 import ParcelScreen2 from "../Screens/ParcelScreen2";
 import DeliveredScreen from "../Screens/DeliveredScreen";
-import ContactUs from "../Screens/ContactUs"
+import ContactUs from "../Screens/ContactUs";
+import TrackScreen from "../Screens/TrackScreen";
 import { createDrawerNavigator, DrawerItem, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { DrawerContent } from "./DrawerContent";
@@ -65,6 +66,14 @@ function HomeStack({ navigation }) {
                     name="Delivered"
                     component={DeliveredScreen}
                 />
+                <Stack.Screen
+                    name="TrackShipment"
+                    component={TrackScreen}
+                    options={{
+                        title: 'Track Shipment'
+                    }}
+                />
+
             </Stack.Navigator>
         </NavigationContainer>
     )
@@ -78,8 +87,18 @@ function ParcelStack() {
                 screenOptions={{
                     headerShown: false,
                     headerTitleAlign: 'center',
+                    headerTransparent:true,
                     headerStyle:{
+                        position: 'absolute',
                         backgroundColor: 'transparent',
+                        zIndex: 100,
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        elevation: 0,
+                        shadowOpacity: 0,
+                        borderBottomWidth: 0
+                    
                     }
                 }}
 
