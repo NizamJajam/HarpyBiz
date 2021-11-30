@@ -144,8 +144,7 @@ export function DrawerContent(props) {
                             label=""
 
                         />
-                        <Drawer.Item
-                            //empty to create gap lmao
+                        <Drawer.Item  
                             icon={({ color, size }) => (
                                 <Icon
                                     color={color}
