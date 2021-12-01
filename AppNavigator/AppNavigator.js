@@ -15,7 +15,7 @@ import Icon from "react-native-vector-icons/FontAwesome5"
 const Stack = createNativeStackNavigator();
 function HomeStack({ navigation }) {
     return (
-        <NavigationContainer independent="true">
+        <NavigationContainer independent={true}>
             <Stack.Navigator
                 initialRouteName="Home"
                 screenOptions={{
@@ -27,7 +27,7 @@ function HomeStack({ navigation }) {
                 <Stack.Screen
                     name="Home"
                     component={HomeScreen}
-                    options={{   
+                    options={{
                         headerLeft: () => (
                             <Icon
                                 name="bars"
@@ -42,16 +42,12 @@ function HomeStack({ navigation }) {
                     }}
                 />
                 <Stack.Screen
-                    name="MainDrawerNavigator"
-                    component={DrawerNavigator}
-                />
-                <Stack.Screen
                     name="DetailsScreen"
                     component={Details}
                 />
                 <Stack.Screen
-                    name="ParcelStack"
-                    component={ParcelStack}
+                    name="Parcel"
+                    component={ParcelScreen}
                 />
                 <Stack.Screen
                     name="OnGoing"
@@ -72,47 +68,25 @@ function HomeStack({ navigation }) {
         </NavigationContainer>
     )
 }
-function ParcelStack() {
-    return (
-        <NavigationContainer independent="true">
-            <Stack.Navigator
-                initialRouteName="Parcel"
-                screenOptions={{
-                    headerShown: false,
-                    headerTitleAlign: 'center',
-                    headerStyle: {
-                        backgroundColor: 'transparent',
-                    }
-                }}
-
-            >
-                <Stack.Screen
-                    name="Parcel"
-                    component={ParcelScreen}
-                />
-                <Stack.Screen
-                    name="Parcel2"
-                    component={ParcelScreen2}
-                />
-
-            </Stack.Navigator>
-        </NavigationContainer>
-    )
-}
 function AppNavigator() {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName="HomeStack"
+                initialRouteName="DrawerNavigator"
                 screenOptions={{
                     headerShown: false,
                     headerTitleAlign: 'center',
                 }}
             >
                 <Stack.Screen
+                    name="Homestack"
+                    component={HomeStack}
+                />
+                <Stack.Screen
                     name="DrawerNavigator"
                     component={DrawerNavigator}
                 />
+
 
             </Stack.Navigator>
         </NavigationContainer>

@@ -117,7 +117,7 @@ export default class ParcelScreen2 extends React.Component {
                         <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
                             <TouchableOpacity
                                 style={{ backgroundColor: "#FAAF40", width: '70%', justifyContent: 'center', alignItems: 'center', height: 50, borderRadius: 5 }}
-                                onPress={() => { }}
+                                onPress={() => {    this.props.navigation.popToTop() }}
 
                             >
                                 <Text style={{ color: 'white', fontWeight: 'bold' }}>Check Out</Text>

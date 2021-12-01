@@ -144,7 +144,7 @@ export function DrawerContent(props) {
                             label=""
 
                         />
-                        <Drawer.Item  
+                        <Drawer.Item
                             icon={({ color, size }) => (
                                 <Icon
                                     color={color}
@@ -152,7 +152,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Contact Us"
-                            onPress={() => { props.navigation.navigate("ContactUs")}}
+                            onPress={() => { props.navigation.navigate("ContactUs") }}
                         />
 
                     </Drawer.Section>

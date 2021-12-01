@@ -56,7 +56,11 @@ function HomeStack({ navigation }) {
                 />
                 <Stack.Screen
                     name="Parcel"
-                    component={ParcelStack}
+                    component={ParcelScreen}
+                />
+                <Stack.Screen
+                    name="Parcel2"
+                    component={ParcelScreen2}
                 />
                 <Stack.Screen
                     name="OnGoing"
@@ -85,21 +89,21 @@ function ParcelStack() {
             <Stack.Navigator
                 initialRouteName="Parcel"
                 screenOptions={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitleAlign: 'center',
-                    headerTransparent:true,
-                    headerStyle:{
-                        position: 'absolute',
-                        backgroundColor: 'transparent',
-                        zIndex: 100,
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        elevation: 0,
-                        shadowOpacity: 0,
-                        borderBottomWidth: 0
+                    // headerTransparent:true,
+                    // headerStyle:{
+                    //     position: 'absolute',
+                    //     backgroundColor: 'transparent',
+                    //     zIndex: 100,
+                    //     top: 0,
+                    //     left: 0,
+                    //     right: 0,
+                    //     elevation: 0,
+                    //     shadowOpacity: 0,
+                    //     borderBottomWidth: 0
                     
-                    }
+                    // }
                 }}
 
             >
@@ -110,6 +114,9 @@ function ParcelStack() {
                 <Stack.Screen
                     name="Parcel2"
                     component={ParcelScreen2}
+                    options={{
+                        title:"Parcel"
+                    }}
                 />
 
             </Stack.Navigator>
