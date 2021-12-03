@@ -41,15 +41,11 @@ export default class ParcelScreen2 extends React.Component {
     render() {
         return (
             <View style={styles.main}>
-
-
                 <ScrollView style={styles.container}>
                     <TouchableOpacity style={styles.topView} onPress={() => { }}>
-
                         <Image
                             source={this.state.itemPicture}
                         />
-
                     </TouchableOpacity>
                     <View style={styles.bottomView}>
 
@@ -70,9 +66,6 @@ export default class ParcelScreen2 extends React.Component {
                                     <TouchableOpacity style={styles.smallButton} onPress={() => { this.minusNumber() }}><Text style={styles.text}>-</Text></TouchableOpacity>
                                     <Text style={{ fontSize: 20, color: "black" }}>  {this.state.quantity}  </Text>
                                     <TouchableOpacity style={styles.smallButton} onPress={() => { this.addNumber() }}><Text style={styles.text}>+</Text></TouchableOpacity>
-                                </View>
-                                <View>
-
                                 </View>
                             </View>
                         </View>
@@ -112,12 +105,10 @@ export default class ParcelScreen2 extends React.Component {
                                 </View>
                             </View>
                         </View>
-
-
                         <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
                             <TouchableOpacity
                                 style={{ backgroundColor: "#FAAF40", width: '70%', justifyContent: 'center', alignItems: 'center', height: 50, borderRadius: 5 }}
-                                onPress={() => {    this.props.navigation.popToTop() }}
+                                onPress={() => { this.props.navigation.popToTop() }}
 
                             >
                                 <Text style={{ color: 'white', fontWeight: 'bold' }}>Check Out</Text>
