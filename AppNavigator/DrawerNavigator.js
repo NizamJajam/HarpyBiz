@@ -55,23 +55,23 @@ function HomeStack({ navigation }) {
                     component={Details}
                 />
                 <Stack.Screen
-                    name="Parcel"
+                    name="ParcelScreen"
                     component={ParcelScreen}
                 />
                 <Stack.Screen
-                    name="Parcel2"
+                    name="ParcelScreen2"
                     component={ParcelScreen2}
                 />
                 <Stack.Screen
-                    name="OnGoing"
+                    name="OnGoingScreen"
                     component={OnGoingScreen}
                 />
                 <Stack.Screen
-                    name="Delivered"
+                    name="DeliveredScreen"
                     component={DeliveredScreen}
                 />
                 <Stack.Screen
-                    name="TrackShipment"
+                    name="TrackScreen"
                     component={TrackScreen}
                     options={{
                         title: 'Track Shipment'
@@ -167,32 +167,6 @@ function DeliveredStack() {
         </NavigationContainer>
     )
 }
-function ContactScreen() {
-    return (
-        <NavigationContainer independent="true">
-            <Stack.Navigator
-                initialRouteName="Delivered"
-                screenOptions={{
-                    headerShown: true,
-                    headerTitleAlign: 'center',
-                }}
-
-            >
-                <Stack.Screen
-                    name="ContactUs"
-                    component={ContactUs}
-                    options={{
-                        title: "Contact Us"
-                    }}
-                />
-
-            </Stack.Navigator>
-        </NavigationContainer>
-    )
-}
-
-
-
 
 function DrawerNavigator() {
     return (
@@ -206,11 +180,13 @@ function DrawerNavigator() {
                 drawerContent={props => <DrawerContent {...props} />}
 
             >
-                <Drawer.Screen name="HomeStack" component={HomeStack} />
-                <Drawer.Screen name="ParcelStack" component={ParcelStack}/>
-                <Drawer.Screen name="OnGoingStack" component={OnGoingStack}/>
-                <Drawer.Screen name="DeliveredStack" component={DeliveredStack}/>
-                <Drawer.Screen name="ContactUs" component={ContactScreen}/>
+                <Drawer.Screen name="Home" component={HomeStack} />
+                <Drawer.Screen name="ParcelScreen" component={ParcelScreen}/>
+                <Drawer.Screen name="ParcelScreen2" component={ParcelScreen2}/>
+                <Drawer.Screen name="OnGoingScreen" component={OnGoingScreen}/>
+                <Drawer.Screen name="DeliveredScreen" component={DeliveredScreen}/>
+                <Drawer.Screen name="ContactUs" component={ContactUs}/>
+                <Drawer.Screen name="TrackScreen" component={TrackScreen}/>
 
             </Drawer.Navigator>
         </NavigationContainer>

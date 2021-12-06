@@ -82,7 +82,7 @@ export default class HomeScreen extends React.Component {
                         </View>
                     </View>
                     <View style={styles.buttonContainer}>
-                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("Parcel") }}>
+                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("ParcelScreen") }}>
                             <Image
                                 source={require("../assets/Parcel.png")}
                                 style={{
@@ -94,7 +94,7 @@ export default class HomeScreen extends React.Component {
                             />
                             <Text style={styles.buttonText}>Parcel</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("OnGoing") }}>
+                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("OnGoingScreen") }}>
                             <Image
                                 source={require("../assets/onGoing.png")}
                                 style={{
@@ -106,7 +106,7 @@ export default class HomeScreen extends React.Component {
                             />
                             <Text style={styles.buttonText}>OnGoing</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("Delivered") }}>
+                        <TouchableOpacity style={styles.buttons} onPress={() => { this.props.navigation.navigate("DeliveredScreen") }}>
                             <Image
                                 source={require("../assets/Delivered.png")}
                                 style={{
@@ -143,7 +143,7 @@ export default class HomeScreen extends React.Component {
                                         </View>
                                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                             <TouchableOpacity
-                                                onPress={() => { this.props.navigation.navigate("TrackShipment") }}
+                                                onPress={() => { this.props.navigation.navigate("TrackScreen") }}
                                                 style={{
                                                     backgroundColor: "#FAAF40",
                                                     width: '100%',

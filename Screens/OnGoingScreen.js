@@ -98,7 +98,7 @@ export default class OnGoingScreen extends React.Component {
                                 </View>
                                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                     <TouchableOpacity
-                                        onPress={() => { this.props.navigation.navigate("TrackShipment") }}
+                                        onPress={() => { this.props.navigation.navigate("TrackScreen") }}
                                         style={{
                                             backgroundColor: "#FAAF40",
                                             width: '100%',

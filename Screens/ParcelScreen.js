@@ -74,7 +74,7 @@ export default class ParcelScreen extends React.Component {
                         <View style={{ justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', width: '80%', height: '15%' }}>
                             <TouchableOpacity
                                 style={{ backgroundColor: "#FAAF40", width: '70%', justifyContent: 'center', alignItems: 'center', height: '70%', borderRadius: 5 }}
-                                onPress={() => { this.props.navigation.navigate("Parcel2") }}
+                                onPress={() => { this.props.navigation.navigate("ParcelScreen2") }}
 
                             >
                                 <Text style={{ color: 'white', fontWeight: 'bold' }}>Next</Text>

@@ -41,7 +41,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Parcel"
-                            onPress={() => { props.navigation.navigate("ParcelStack") }}
+                            onPress={() => { props.navigation.navigate("ParcelScreen") }}
 
                         />
                         <Drawer.Item
@@ -52,7 +52,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="OnGoing"
-                            onPress={() => { props.navigation.navigate("OnGoingStack") }}
+                            onPress={() => { props.navigation.navigate("OnGoingScreen") }}
 
                         />
                         <Drawer.Item
@@ -63,7 +63,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Delivered"
-                            onPress={() => { props.navigation.navigate("DeliveredStack") }}
+                            onPress={() => { props.navigation.navigate("DeliveredScreen") }}
 
                         />
                         <Drawer.Item

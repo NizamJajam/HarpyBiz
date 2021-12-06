@@ -100,7 +100,7 @@ export default class ContactUs extends React.Component {
                             <TextInput placeholder="Message" placeholderTextColor="grey" style={styles.messageInput} multiline={true} />
                             <TouchableOpacity
                                 style={{ backgroundColor: "#FAAF40", width: '40%', justifyContent: 'center', alignItems: 'center', height: 45, borderRadius: 5 }}
-                                onPress={() => {}}
+                                onPress={() => {this.props.navigation.navigate("Home")}}
 
                             >
                                 <Text style={{ color: 'white', fontWeight: 'bold' }}>Send Message</Text>
