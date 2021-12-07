@@ -15,6 +15,7 @@ export default class TrackScreen extends React.Component {
             currentPosition: 0,
             estimatedTime: '14:50 P.M',
             estimatedHours: '2 - 3 Hours',
+            buttonColor: "#FAAF40",
             RiderDetails: [
                 {
                     status: 'Parcel picked up',
@@ -72,6 +73,15 @@ export default class TrackScreen extends React.Component {
             ]
         }
     }
+
+    //just turns the button grey for now lmao
+    requestCancelOrder(){
+        this.setState({
+            buttonColor: "#A9A9A9"
+        })
+    }
+
+    //this checks if the route is finished based on the provided json file
     checkDone(isDone, username, route, details) {
         if (!isDone) {
             return (
@@ -143,7 +153,7 @@ export default class TrackScreen extends React.Component {
                     </View>
 
                     <View style={{ flex: 2.5, flexDirection: 'row', justifyContent: 'space-around', width: '95%', alignItems: 'center' }}>
-                        <TouchableOpacity style={{ backgroundColor: '#FAAF40', width: '30%', height: '60%', justifyContent: 'center', alignItems: 'center', borderRadius: 5 }}>
+                        <TouchableOpacity style={{ backgroundColor: this.state.buttonColor, width: '30%', height: '60%', justifyContent: 'center', alignItems: 'center', borderRadius: 5 }} onPress={()=>{this.requestCancelOrder()}}>
                             <Text style={{ color: 'white', fontSize: 10, textAlign: 'center', fontFamily: 'SourceCodePro-SemiBold' }}>Request Order Cancellation</Text>
                         </TouchableOpacity>
                         <View style={{ backgroundColor: '#FAAF40', width: '65%', height: '60%', justifyContent: 'space-evenly', alignItems: 'center', borderRadius: 5, flexDirection: 'row' }}>
@@ -249,33 +259,3 @@ const styles = StyleSheet.create({
         marginTop: 5,
     },
 })
-
-
-//no idea how to separate step indicator with the labels. Temporary for now
-const labels = ["                        Rider", "                      Cloud Runner", "                        Rider", "                       Recipient"];
-const customStyles = {
-    stepIndicatorSize: 25,
-    currentStepIndicatorSize: 30,
-    separatorStrokeWidth: 2,
-    currentStepStrokeWidth: 3,
-    stepStrokeCurrentColor: '#00FF19',
-    stepStrokeWidth: 3,
-    stepStrokeFinishedColor: '#00FF19',
-    stepStrokeUnFinishedColor: '#aaaaaa',
-    separatorFinishedColor: '#00FF19',
-    separatorUnFinishedColor: '#aaaaaa',
-    stepIndicatorFinishedColor: '#00FF19',
-    stepIndicatorUnFinishedColor: '#ffffff',
-    stepIndicatorCurrentColor: '#ffffff',
-    stepIndicatorLabelFontSize: 13,
-    currentStepIndicatorLabelFontSize: 13,
-    stepIndicatorLabelCurrentColor: '#00FF19',
-    stepIndicatorLabelFinishedColor: '#ffffff',
-    stepIndicatorLabelUnFinishedColor: '#aaaaaa',
-    labelColor: '#999999',
-    labelSize: 13,
-    currentStepLabelColor: '#fe7013',
-    labelAlign: 'center',
-
-
-}

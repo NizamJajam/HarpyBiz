@@ -89,7 +89,7 @@ export default class DeliveredScreen extends React.Component {
                                 </View>
                                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                     <TouchableOpacity
-                                        
+                                        onPress={()=>{this.props.navigation.navigate("TrackScreen")}}
                                         style={{
                                             backgroundColor: "#C4C4C4",
                                             width: '100%',
