@@ -75,10 +75,18 @@ export default class TrackScreen extends React.Component {
     }
 
     //just turns the button grey for now lmao
-    requestCancelOrder(){
-        this.setState({
-            buttonColor: "#A9A9A9"
-        })
+    requestCancelOrder() {
+        if (this.state.buttonColor=="#FAAF40") {
+            this.setState({
+                buttonColor: "#A9A9A9"
+            })
+        }
+        else {
+            this.setState({
+                buttonColor: "#FAAF40"
+            })
+        }
+
     }
 
     //this checks if the route is finished based on the provided json file
@@ -153,7 +161,7 @@ export default class TrackScreen extends React.Component {
                     </View>
 
                     <View style={{ flex: 2.5, flexDirection: 'row', justifyContent: 'space-around', width: '95%', alignItems: 'center' }}>
-                        <TouchableOpacity style={{ backgroundColor: this.state.buttonColor, width: '30%', height: '60%', justifyContent: 'center', alignItems: 'center', borderRadius: 5 }} onPress={()=>{this.requestCancelOrder()}}>
+                        <TouchableOpacity style={{ backgroundColor: this.state.buttonColor, width: '30%', height: '60%', justifyContent: 'center', alignItems: 'center', borderRadius: 5 }} onPress={() => { this.requestCancelOrder() }}>
                             <Text style={{ color: 'white', fontSize: 10, textAlign: 'center', fontFamily: 'SourceCodePro-SemiBold' }}>Request Order Cancellation</Text>
                         </TouchableOpacity>
                         <View style={{ backgroundColor: '#FAAF40', width: '65%', height: '60%', justifyContent: 'space-evenly', alignItems: 'center', borderRadius: 5, flexDirection: 'row' }}>
