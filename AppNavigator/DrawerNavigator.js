@@ -57,18 +57,31 @@ function HomeStack({ navigation }) {
                 <Stack.Screen
                     name="ParcelScreen"
                     component={ParcelScreen}
+                    options={{
+                        title: 'Parcel'
+                    }}
                 />
                 <Stack.Screen
                     name="ParcelScreen2"
                     component={ParcelScreen2}
+                    options={{
+                        title: 'Parcel'
+                    }}
                 />
                 <Stack.Screen
                     name="OnGoingScreen"
                     component={OnGoingScreen}
+                    options={{
+                        title: 'OnGoing'
+                    }}
+
                 />
                 <Stack.Screen
                     name="DeliveredScreen"
                     component={DeliveredScreen}
+                    options={{
+                        title: 'Delivered'
+                    }}
                 />
                 <Stack.Screen
                     name="TrackScreen"
