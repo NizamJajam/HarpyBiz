@@ -84,12 +84,12 @@ export default class DeliveredScreen extends React.Component {
                             <View style={styles.listItems}>
                                 <View style={{ flex: 3, padding: 5 }}>
                                     <Text style={{ color: 'black', fontFamily: 'SourceCodePro-SemiBold', }}>{item.username}</Text>
-                                    <Text style={{ color: 'grey', fontFamily: 'SourceCodePro',fontSize: 11 }}>{item.date}</Text>
-                                    <Text style={{ color: 'grey', fontFamily: 'SourceCodePro',fontSize: 11 }}>{item.route}</Text>
+                                    <Text style={{ color: 'grey', fontFamily: 'SourceCodePro', fontSize: 11 }}>{item.date}</Text>
+                                    <Text style={{ color: 'grey', fontFamily: 'SourceCodePro', fontSize: 11 }}>{item.route}</Text>
                                 </View>
                                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                     <TouchableOpacity
-                                        onPress={()=>{this.props.navigation.navigate("TrackScreen")}}
+                                        onPress={() => { this.props.navigation.navigate("TrackScreen", { allComplete: true }) }}
                                         style={{
                                             backgroundColor: "#C4C4C4",
                                             width: '100%',
@@ -124,8 +124,8 @@ const styles = StyleSheet.create({
         width: '95%',
 
     },
-    listItems: {   
-        paddingHorizontal: 5, 
+    listItems: {
+        paddingHorizontal: 5,
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
