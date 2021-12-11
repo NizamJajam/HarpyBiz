@@ -2,9 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity, FlatList } from 'react-native';
 const windowHeight = Dimensions.get('window').height;
 import Icon from "react-native-vector-icons/Ionicons"
-import StepIndicator from "react-native-step-indicator"
-
-const { allComplete } = route.params;
 
 export default class TrackScreen extends React.Component {
     constructor(props) {
@@ -18,7 +15,7 @@ export default class TrackScreen extends React.Component {
             estimatedTime: '14:50 P.M',
             estimatedHours: '2 - 3 Hours',
             buttonColor: "#FAAF40",
-            allComplete: allComplete,
+            allComplete: "",
             RiderDetails: [
                 {
                     status: 'Parcel picked up',
@@ -75,10 +72,9 @@ export default class TrackScreen extends React.Component {
 
             ]
         }
+
     }
-    allComplete(){
-       
-    }
+
 
     //just turns the button grey for now lmao
     requestCancelOrder() {
