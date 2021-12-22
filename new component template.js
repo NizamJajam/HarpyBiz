@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
 const windowHeight = Dimensions.get('window').height;
 
-export default class newFile extends React.Component{
+export default class App extends React.Component{
     constructor(props){
         super(props);
         this.state ={
@@ -12,7 +12,7 @@ export default class newFile extends React.Component{
     render(){
         return(
             <View style={styles.main}>
-                <Text style={{color: 'black'}}>Details here</Text>
+                <Text style={{color: 'black'}}>QR here</Text>
             </View>
         )
     }
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     main:{
         flex: 1, 
         width: '100%',
-        backgroundColor: "white"
+        backgroundColor: "white",
+        
     },
 })
